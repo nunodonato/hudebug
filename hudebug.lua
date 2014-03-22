@@ -29,6 +29,11 @@ function hudebug.setScale(scale)
     hudebug.scale = scale
 end
 
+function hudebug.setPosition(x,y)
+    hudebug.posx = x
+    hudebug.posy = y
+end
+
 
 function hudebug.updateMsg(slot,msg)
     if msg == "" then 
@@ -39,6 +44,10 @@ end
 function hudebug.reset()
     hudebug.slots = nil
     hudebug.slots = {}
+end
+
+function hudebug.toggle()
+    hudebug.active = not hudebug.active
 end
 
 
