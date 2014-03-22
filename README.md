@@ -25,6 +25,10 @@ HUDebug - lövely and quick onscreen debugging
       
   * If the slot_id does not exist, it is created. 
   * An empty message ("") will delete the slot.
+  
+Use reset() to delete all slots and messages
+
+      hudebug.reset()
 
       
 ##advanced config
