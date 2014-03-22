@@ -45,4 +45,8 @@ stuff you can do after loading hudebug
     hudebug.setScale(scale)
   Scale text by the 'scale' value
   
+## Screenshots?
 
+[Imgur](http://i.imgur.com/m9leK4R.png)
+
+amazing, huh?
