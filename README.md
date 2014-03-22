@@ -4,6 +4,7 @@ hudebug
 HUDebug - lövely and quick onscreen debugging
 
 #usage
+  
   hudebug = require("hudebug")
   
   function love.draw()
