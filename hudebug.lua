@@ -3,7 +3,7 @@
 
 local hudebug = {}
 
-local active = true
+hudebug.active = true
 
 hudebug.color = {}
 hudebug.color.r = 0
@@ -52,7 +52,7 @@ end
 
 
 function hudebug.draw()
-  if (not active) then return end
+  if (not hudebug.active) then return end
     local c = 1
     local y = hudebug.posy
     love.graphics.scale(hudebug.scale)
