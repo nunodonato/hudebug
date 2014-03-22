@@ -45,6 +45,15 @@ stuff you can do after loading hudebug
     hudebug.setScale(scale)
   Scale text by the 'scale' value
   
+#### Set HUD position
+
+    hudebug.setPosition(x,y)
+  Start printing text from x,y position on the screen
+  
+#### Toggle HUD visibility
+
+    hudebug.toggle()
+  
 ## Screenshots?
 
 [Imgur](http://i.imgur.com/m9leK4R.png)
