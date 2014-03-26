@@ -55,6 +55,7 @@ function hudebug.draw()
   if (not hudebug.active) then return end
     local c = 1
     local y = hudebug.posy
+    love.graphics.push()
     love.graphics.scale(hudebug.scale)
     love.graphics.reset()
     love.graphics.setColor(hudebug.color.r,hudebug.color.g,hudebug.color.b,hudebug.color.a)
@@ -64,7 +65,7 @@ function hudebug.draw()
       love.graphics.print(v,hudebug.posx,y)
       c = c+1
     end
-    
+    love.graphics.pop()
 end
 
 return hudebug
