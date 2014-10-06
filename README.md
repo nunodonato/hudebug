@@ -30,6 +30,23 @@ Use reset() to delete all slots and messages. If this is done, you will need to 
 
       hudebug.reset()
 
+##Working with HUDebug Pages
+
+  To manage this library it is very simple. In your love.load() function, have a separate function call do something like this:
+  
+    function DebugPages()
+      hudebug.pageName(1, "Your Page 1")
+      hudebug.pageName(2, "Your Page 2")
+      hudebug.pageName(3, "Your Page 3")
+      hudebug.pageName(4, "Your Page 4")
+    end
+  
+  When you are updating a message on a page, use the following format:
+  
+    function FooBar()
+     hudebug.updateMsg(1, "Test", "X: " .. unit.x)
+     hudebug.updateMsg(2, 12, "Y: " .. unit.y)
+    end
       
 ##Configuration
 
