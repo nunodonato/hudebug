@@ -102,6 +102,9 @@ end
 function hudebug.reset()
     hudebug.slots = nil
     hudebug.slots = {}
+    if hudebug.active then
+      hudebug.active = false
+    end
 end
 
 --[[
