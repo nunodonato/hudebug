@@ -1,9 +1,9 @@
-hudebug
+HUDebug
 =======
 
 HUDebug - lövely and quick onscreen debugging
 
-##quick start
+##Quick start
   
     hudebug = require("hudebug")
     
@@ -17,23 +17,23 @@ HUDebug - lövely and quick onscreen debugging
       hudebug.updateMsg("dtinfo","dt = "..dt)
     end
 
-## the message slots
+##Message slots
 
-  The Paged version of HuDebug uses two values for messages: page, and slot. The page is always an integer value and the   slot may be either an integer or string. Below is an example of an updateMsg call.
+  The Paged version of HUDebug uses two values for messages: page, and slot. The page is always an integer value and the   slot may be either an integer or string. Below is an example of an updateMsg call.
     
       hudebug.updateMsg(page, slot, message)
       
   * If the slot_id does not exist, it is created. 
   * An empty message ("") will delete the slot.
   
-Use reset() to delete all slots and messages. If this is done, you will need to initialize any pages you intend to use. Also, if this is done while hudebug is on, it will be turned off to prevent crashes.
+Use reset() to delete all slots and messages. If this is done, you will need to initialize any pages you intend to use. Also, if this is done while HUDebug is on, it will be turned off to prevent crashes.
 
       hudebug.reset()
 
       
 ##Configuration
 
-These are things that can be modified at run time on HuDebug.
+These are things that can be modified at run time on HUDebug.
 
 #### Set HUD color
 
