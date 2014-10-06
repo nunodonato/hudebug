@@ -8,7 +8,7 @@ HUDebug - lövely and quick onscreen debugging
     hudebug = require("hudebug")
     
     function love.draw()
-      -- all your stuff...
+      -- draw code..
       
       hudebug.draw() -- should be the last thing
     end
@@ -19,21 +19,21 @@ HUDebug - lövely and quick onscreen debugging
 
 ## the message slots
 
-  hudebug stores one message for each slot id. You add/update a message to a slot with
+  The Paged version of HuDebug uses two values for messages: page, and slot. The page is always an integer value and the   slot may be either an integer or string. Below is an example of an updateMsg call.
     
-      hudebug.updateMsg(slot_id,message)
+      hudebug.updateMsg(page, slot, message)
       
   * If the slot_id does not exist, it is created. 
   * An empty message ("") will delete the slot.
   
-Use reset() to delete all slots and messages
+Use reset() to delete all slots and messages. If this is done, you will need to initialize any pages you intend to use. Also, if this is done while hudebug is on, it will be turned off to prevent crashes.
 
       hudebug.reset()
 
       
-##advanced config
+##Configuration
 
-stuff you can do after loading hudebug
+These are things that can be modified at run time on HuDebug.
 
 #### Set HUD color
 
@@ -43,12 +43,12 @@ stuff you can do after loading hudebug
 #### Set Text size
 
     hudebug.setScale(scale)
-  Scale text by the 'scale' value
+  Scale text by the 'scale' value.
   
 #### Set HUD position
 
     hudebug.setPosition(x,y)
-  Start printing text from x,y position on the screen
+  Start printing text from x,y position on the screen.
   
 #### Toggle HUD visibility
 
@@ -56,6 +56,8 @@ stuff you can do after loading hudebug
   
 ## Screenshots?
 
+This is an old img from the master source, new ones will be uploaded later.
+
 [Imgur](http://i.imgur.com/m9leK4R.png)
 
-amazing, huh?
+
