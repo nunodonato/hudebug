@@ -6,15 +6,26 @@ HUDebug - lövely and quick onscreen debugging
 ##Quick start
   
     hudebug = require("hudebug")
-    
-    function love.draw()
-      -- draw code..
-      
-      hudebug.draw() -- should be the last thing
+    hudebug.toggle()
+    function love.load()
+
+    end
+
+    function love.update(dt)
+      hudebug.pageName(1,"name")
+      hudebug.updateMsg(1,"dtinfo","dt = "..dt)
     end
     
-    function love.update(dt)
-      hudebug.updateMsg("dtinfo","dt = "..dt)
+    function love.draw()
+      -- this should be the last thing in your draw call
+      hudebug.draw()
+    end
+    
+    
+    function love.keypressed(key)
+      if key=="f12" then
+        hudebug.toggle() -- turn it on/off
+      end
     end
 
 ##Message slots
