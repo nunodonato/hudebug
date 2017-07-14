@@ -102,6 +102,8 @@ end
 function hudebug.reset()
     hudebug.slots = nil
     hudebug.slots = {}
+    hudebug.pageCount = 0
+    hudebug.page = 1
     if hudebug.active then
       hudebug.active = false
     end
